@@ -59,6 +59,10 @@ public class ServiceController {
     return result;
   }
 
+  /**
+   * 此处似乎有所不妥, admin服务的发现放入config中, 即将admin和config绑定在一块
+   * @return
+   */
   @RequestMapping("/admin")
   public List<ServiceDTO> getAdminService() {
     List<InstanceInfo> instances = discoveryService.getAdminServiceInstances();
